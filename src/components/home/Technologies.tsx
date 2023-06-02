@@ -10,7 +10,7 @@ interface TechnologyProps {
 export default function Technologies({ technology }: TechnologyProps) {
   return (
     <>
-      <div className="m-4 space-y-4 flex flex-col items-center">
+      <div className="m-4 flex flex-col items-center space-y-4">
         {technology.map((item) => (
           <a
             key={item.id}
@@ -18,8 +18,8 @@ export default function Technologies({ technology }: TechnologyProps) {
             target="_blank"
             rel="noreferrer"
           >
-            <Card className="grid grid-cols-12 items-center sm:max-w-3xl h-72 sm:h-44">
-              <div className="p-2 col-span-6 flex justify-center sm:col-span-2">
+            <Card className="grid h-72 grid-cols-12 items-center sm:h-44 sm:max-w-3xl">
+              <div className="col-span-6 flex justify-center p-2 sm:col-span-2">
                 <Image
                   src={item.icon}
                   alt="icon"
@@ -27,7 +27,7 @@ export default function Technologies({ technology }: TechnologyProps) {
                   height={100}
                 ></Image>
               </div>
-              <CardTitle className="text-2xl col-span-6 flex justify-center sm:col-span-2">
+              <CardTitle className="col-span-6 flex justify-center text-2xl sm:col-span-2">
                 {item.name}
               </CardTitle>
               <CardContent className="col-span-12 sm:col-span-8">

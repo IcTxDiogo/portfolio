@@ -6,9 +6,9 @@ const text = {
 
 export default function Motivations() {
   return (
-    <div className="m-4 space-y-4 flex flex-col items-center">
+    <div className="m-4 flex flex-col items-center space-y-4">
       <div
-        className="flex flex-col justify-center p-6 sm:max-w-3xl rounded-xl sm:h-72"
+        className="flex flex-col justify-center rounded-xl p-6 sm:h-72 sm:max-w-3xl"
         style={{
           backgroundImage: "url('https://i.imgur.com/zoCJcf7.jpg')",
           backgroundSize: 'cover',

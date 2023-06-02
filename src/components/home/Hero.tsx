@@ -7,7 +7,7 @@ import { Button } from '@/ui/button'
 export default function Hero() {
   return (
     <div
-      className="flex flex-col h-[94vh] justify-center"
+      className="flex h-[94vh] flex-col justify-center "
       style={{
         backgroundImage: "url('https://i.imgur.com/1xVhFh3.jpg')",
         backgroundSize: 'cover',
@@ -15,7 +15,7 @@ export default function Hero() {
         boxShadow: 'inset 0 0 0 1000px rgba(0, 0, 0, 0.6)',
       }}
     >
-      <div className="flex flex-col justify-center items-center sm:flex-row-reverse">
+      <div className="flex flex-col items-center justify-center sm:flex-row-reverse">
         <Image
           src="https://i.imgur.com/iF3vs2l.jpg"
           className="max-w-sm rounded-full shadow-2xl"
@@ -31,7 +31,7 @@ export default function Hero() {
             }
           </p>
           <Link href="/projects">
-            <Button className="font-semibold text-lg">
+            <Button className="text-lg font-semibold">
               Take a look at my projects
               <ArrowRight />
             </Button>

@@ -21,6 +21,11 @@ export const homeMenuItens: MenuItens[] = [
     content: 'Home',
     href: '/',
   },
+  {
+    id: uuidv4(),
+    content: 'About',
+    href: '/about',
+  },
 ]
 
 export const baseTechnology: BaseTechnology[] = [
