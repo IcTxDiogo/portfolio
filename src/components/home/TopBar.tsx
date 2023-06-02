@@ -16,7 +16,7 @@ export default function TopBar({ pageTitle, menuItens }: TopBarProps) {
         <h1 className="text-3xl font-bold tracking-wide">{pageTitle}</h1>
       </div>
       <nav>
-        <ul>
+        <ul className="flex">
           {menuItens.map((item) => (
             <li key={item.id}>
               <Link href={item.href}>
