@@ -39,10 +39,7 @@ export default function NLWLayout({ children }: RootLayoutProps) {
     >
       <main className="grid min-h-screen grid-cols-2 ">
         {/* left */}
-        <div
-          className="relative flex flex-col items-start justify-between overflow-hidden border-r border-white/10 bg-cover px-28 py-16"
-          style={{ backgroundImage: "url('../../../assets/bg-stars.svg')" }}
-        >
+        <div className="relative flex flex-col items-start justify-between overflow-hidden border-r border-white/10 bg-stars bg-cover px-28 py-16">
           {/* blur */}
           <div className="absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-50 blur-full " />
           {/* stripes */}
@@ -54,7 +51,7 @@ export default function NLWLayout({ children }: RootLayoutProps) {
         </div>
 
         {/* right */}
-        <div className="flex max-h-screen flex-col overflow-y-scroll bg-cover ">
+        <div className="flex max-h-screen flex-col overflow-y-scroll bg-stars bg-cover ">
           {children}
         </div>
       </main>
