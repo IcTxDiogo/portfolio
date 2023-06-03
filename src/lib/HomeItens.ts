@@ -15,6 +15,23 @@ export interface BaseTechnology {
   externalUrl: string
 }
 
+export interface Project {
+  id: string
+  name: string
+  description: string
+  url: string
+}
+
+export const projects: Project[] = [
+  {
+    id: uuidv4(),
+    name: 'NLW - Space time',
+    description:
+      'This is a project made in the next level week event. from Rocketseat',
+    url: '/project/nlw-space-time',
+  },
+]
+
 export const homeMenuItens: MenuItens[] = [
   {
     id: uuidv4(),
@@ -25,6 +42,11 @@ export const homeMenuItens: MenuItens[] = [
     id: uuidv4(),
     content: 'About',
     href: '/about',
+  },
+  {
+    id: uuidv4(),
+    content: 'Projects',
+    href: '/projects',
   },
 ]
 
