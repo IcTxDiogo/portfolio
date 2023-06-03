@@ -37,7 +37,7 @@ export default function NLWLayout({ children }: RootLayoutProps) {
     <section
       className={`${roboto.variable} ${baiJamjure.variable} bg-gray-900 font-sans text-gray-100`}
     >
-      <main className="grid min-h-screen grid-cols-2 ">
+      <main className="grid min-h-screen sm:grid-cols-2 ">
         {/* left */}
         <div className="relative flex flex-col items-start justify-between overflow-hidden border-r border-white/10 bg-stars bg-cover px-28 py-16">
           {/* blur */}
