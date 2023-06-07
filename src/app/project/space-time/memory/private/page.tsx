@@ -46,10 +46,6 @@ export default async function PrivateMemoryPage() {
 
   const memories: Memory[] = response.data
 
-  if (memories.length === 0) {
-    return <EmptyMemories />
-  }
-
   return (
     <div className="grid min-h-screen grid-cols-1 xl:grid-cols-2">
       <div className="flex max-h-screen flex-col overflow-y-scroll bg-stars xl:order-last">
@@ -71,36 +67,40 @@ export default async function PrivateMemoryPage() {
           )}
         </div>
         <div className="flex flex-col gap-10 p-8">
-          {memories.map((memory) => {
-            return (
-              <div key={memory.id} className="space-y-4">
-                <div className="flex justify-between">
-                  <time className="-ml-8 flex items-center gap-2 text-sm text-gray-100 before:h-px before:w-5 before:bg-gray-50">
-                    {dayjs(memory.createdAt).format('D[ de ]MMMM[, ]YYYY')}
-                  </time>
+          {memories.length === 0 ? (
+            <EmptyMemories />
+          ) : (
+            memories.map((memory) => {
+              return (
+                <div key={memory.id} className="space-y-4">
+                  <div className="flex justify-between">
+                    <time className="-ml-8 flex items-center gap-2 text-sm text-gray-100 before:h-px before:w-5 before:bg-gray-50">
+                      {dayjs(memory.createdAt).format('D[ de ]MMMM[, ]YYYY')}
+                    </time>
+                  </div>
+                  {memory.coverUrl && (
+                    <Image
+                      src={memory.coverUrl}
+                      width={400}
+                      height={200}
+                      alt=""
+                      className="aspect-video w-full rounded-lg object-cover"
+                    />
+                  )}
+                  <p className="text-lg leading-relaxed text-gray-100">
+                    {memory.excerpt}
+                  </p>
+                  <Link
+                    href={`/memories/${memory.id}`}
+                    className="flex items-center gap-2 text-sm text-gray-200 hover:text-gray-100"
+                  >
+                    Ler mais
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </div>
-                {memory.coverUrl && (
-                  <Image
-                    src={memory.coverUrl}
-                    width={400}
-                    height={200}
-                    alt=""
-                    className="aspect-video w-full rounded-lg object-cover"
-                  />
-                )}
-                <p className="text-lg leading-relaxed text-gray-100">
-                  {memory.excerpt}
-                </p>
-                <Link
-                  href={`/memories/${memory.id}`}
-                  className="flex items-center gap-2 text-sm text-gray-200 hover:text-gray-100"
-                >
-                  Ler mais
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            )
-          })}
+              )
+            })
+          )}
         </div>
       </div>
       <LeftSide

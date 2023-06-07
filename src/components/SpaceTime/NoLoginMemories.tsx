@@ -1,15 +1,15 @@
 import Link from 'next/link'
 
-export default function EmptyMemories() {
+export default function NoLoginMemories() {
   return (
     <div className="flex flex-1 items-center justify-center p-16">
       <p className="w-[360px] text-center leading-relaxed">
-        Nenhuma memoria registrada,{' '}
+        Voce ainda nao esta logado, faça login ou veja as memorias publicas{' '}
         <Link
           href="/project/space-time/memory/public"
           className="underline hover:text-gray-50/70"
         >
-          criar agora
+          memorias publicas
         </Link>
         !
       </p>

@@ -1,14 +1,15 @@
 import { cookies } from 'next/headers'
+import ptBr from 'dayjs/locale/pt-br'
 import Image from 'next/image'
 import dayjs from 'dayjs'
-import ptBr from 'dayjs/locale/pt-br'
 
-import LeftSide from '@/components/SpaceTime/LeftSide'
-import { api } from '@/lib/api'
+import NoLoginMemories from '@/components/SpaceTime/NoLoginMemories'
 import { ChevronRight, ChevronLeft } from 'lucide-react'
-import Link from 'next/link'
+import LeftSide from '@/components/SpaceTime/LeftSide'
 import Profile from '@/components/SpaceTime/Profile'
 import SignIn from '@/components/SpaceTime/SignIn'
+import { api } from '@/lib/api'
+import Link from 'next/link'
 
 dayjs.locale(ptBr)
 
@@ -52,7 +53,7 @@ export default async function PublicMemoryPage() {
   function showMemories() {
     const memories: MemoryAutor[] | null = response.data
     if (!memories) return <h1>no memories</h1>
-    if (!memories.length) return <h1>no memories</h1>
+    if (!memories.length) return <NoLoginMemories />
     return (
       <>
         <div className="flex items-center justify-between px-10 py-6 xl:hidden">

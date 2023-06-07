@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 
-import EmptyMemories from './EmptyMemories'
+import NoLoginMemories from './NoLoginMemories'
 
 interface ShowByAuthProps {
   auth: boolean
@@ -27,7 +27,7 @@ export default function ShowByAuth({ auth }: ShowByAuthProps) {
   }, [auth, Router])
   return (
     <>
-      <EmptyMemories />
+      <NoLoginMemories />
     </>
   )
 }
