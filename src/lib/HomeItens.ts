@@ -28,7 +28,7 @@ export const projects: Project[] = [
     name: 'NLW - Space time',
     description:
       'This is a project made in the next level week event. from Rocketseat',
-    url: '/project/nlw-space-time',
+    url: '/project/space-time',
   },
 ]
 

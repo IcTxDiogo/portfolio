@@ -4,7 +4,6 @@ import '@/globals.css'
 
 import { ReactNode } from 'react'
 import { Roboto_Flex } from 'next/font/google'
-import Footer from '@/components/home/Footer'
 
 const robotoFlex = Roboto_Flex({ subsets: ['latin'] })
 
@@ -16,10 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="dark">
-      <body className={robotoFlex.className}>
-        {children}
-        <Footer />
-      </body>
+      <body className={robotoFlex.className}>{children}</body>
     </html>
   )
 }

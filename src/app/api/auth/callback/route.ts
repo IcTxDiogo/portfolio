@@ -12,13 +12,13 @@ export async function GET(request: NextRequest) {
   const { token } = registerResponse.data
 
   const redirectURL =
-    redirectTo ?? new URL('/project/nlw-space-time', request.url)
+    redirectTo ?? new URL('/project/space-time/memory/private', request.url)
 
   const cookieExpiresInSeconds = 60 * 60 * 24 * 3 // 3 days
 
   return NextResponse.redirect(redirectURL, {
     headers: {
-      'Set-Cookie': `token=${token}; Path=/project/nlw-space-time; max-age=${cookieExpiresInSeconds}`,
+      'Set-Cookie': `token=${token}; Path=/project/space-time; max-age=${cookieExpiresInSeconds}`,
     },
   })
 }

@@ -18,7 +18,7 @@ export default function Hero() {
       </div>
       <Link
         className="inline-block rounded-full bg-green-500 px-5 py-3 font-alt text-sm uppercase leading-none text-black hover:bg-green-600"
-        href="/project/nlw-space-time/memories/new"
+        href="/project/space-time/new-memory"
       >
         CADASTRAR LEMBRANçA
       </Link>
