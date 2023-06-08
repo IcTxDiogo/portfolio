@@ -7,7 +7,7 @@ import { Button } from '@/ui/button'
 export default function Hero() {
   return (
     <div
-      className="flex h-[94vh] flex-col justify-center "
+      className="flex h-[92vh] flex-col justify-center "
       style={{
         backgroundImage: "url('https://i.imgur.com/1xVhFh3.jpg')",
         backgroundSize: 'cover',

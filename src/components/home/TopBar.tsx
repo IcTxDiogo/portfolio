@@ -11,7 +11,7 @@ interface TopBarProps {
 
 export default function TopBar({ pageTitle, menuItens }: TopBarProps) {
   return (
-    <header className="sticky top-0 z-20 flex h-[6vh] items-center justify-between bg-background p-4">
+    <header className="sticky top-0 z-20 flex h-[8vh] items-center justify-between bg-background p-6">
       <div>
         <h1 className="text-3xl font-bold tracking-wide">{pageTitle}</h1>
       </div>
