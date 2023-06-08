@@ -29,7 +29,7 @@ import { Checkbox } from '@/ui/checkbox'
 export interface Memory {
   coverUrl: string
   excerpt: string
-  createdAt: string
+  memoryDate: string
   id: string
 }
 

@@ -2,9 +2,9 @@ import Hero from '@/components/SpaceTime/Hero'
 import Profile from '@/components/SpaceTime/Profile'
 import SignIn from '@/components/SpaceTime/SignIn'
 import Copyright from '@/components/SpaceTime/Copyright'
-import Link from 'next/link'
+import Nav from './Nav'
 
-interface RightSideProps {
+interface LeftSideProps {
   isAuthenticated: boolean
   className?: string
 }
@@ -12,7 +12,7 @@ interface RightSideProps {
 export default function LeftSide({
   isAuthenticated,
   className,
-}: RightSideProps) {
+}: LeftSideProps) {
   return (
     <div
       className={`relative flex flex-col items-center justify-between overflow-hidden border-r border-white/10  bg-stars bg-cover px-10 py-6 xl:items-start xl:px-28 xl:py-16 ${className}`}
@@ -23,19 +23,7 @@ export default function LeftSide({
       <div className="absolute bottom-0 right-2 top-0 w-2 bg-stripes" />
       <div className="flex w-full justify-between xl:justify-start">
         {isAuthenticated ? <Profile /> : <SignIn />}
-        <div className="flex items-center gap-4">
-          {isAuthenticated && (
-            <Link
-              href="/project/space-time/memory/private"
-              className="xl:hidden"
-            >
-              Suas Memorias
-            </Link>
-          )}
-          <Link href="/project/space-time/memory/public" className="xl:hidden">
-            Ver memorias publicas
-          </Link>
-        </div>
+        <Nav isAuthenticated={isAuthenticated} page="homeLeft" />
       </div>
       <Hero />
       <Copyright />
