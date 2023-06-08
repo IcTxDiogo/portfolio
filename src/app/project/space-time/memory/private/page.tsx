@@ -16,6 +16,12 @@ export default async function PrivateMemoryPage() {
   })
   const memories: Memory[] = response.data
 
+  memories.sort((a, b) => {
+    const aDate = new Date(a.memoryDate)
+    const bDate = new Date(b.memoryDate)
+    return bDate.getTime() + aDate.getTime()
+  })
+
   return (
     <>
       <div className="flex max-h-screen flex-col overflow-y-scroll bg-stars xl:order-last">

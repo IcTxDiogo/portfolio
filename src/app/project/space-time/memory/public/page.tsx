@@ -20,6 +20,11 @@ export default async function PublicMemoryPage() {
   const isAuthenticated = cookies().has('token')
   const response = await api.get('/memories/public')
   const memories: PublicMemory[] = response.data
+  memories.sort((a, b) => {
+    const aDate = new Date(a.memoryDate)
+    const bDate = new Date(b.memoryDate)
+    return bDate.getTime() + aDate.getTime()
+  })
 
   return (
     <>
