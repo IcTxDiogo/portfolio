@@ -37,7 +37,7 @@ export default function SkillsSection() {
 
   const featuredProjects = [
     {
-      name: "Bullet Journal Digital",
+      name: "BulletFlow",
       description:
         "Sistema completo de organização pessoal digital com funcionalidades de planejamento, acompanhamento de hábitos e produtividade.",
       technologies: [
@@ -48,18 +48,18 @@ export default function SkillsSection() {
         "Tailwind CSS",
       ],
       status: "Em desenvolvimento",
-      link: "#",
+      link: "https://bullet-flow.diogo-santos.tech",
     },
   ];
 
   return (
-    <section id="work" className="py-20">
+    <section id="work" className="bg-white py-20 dark:bg-gray-800">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="animate-fade-in-up mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold lg:text-4xl">
             💼 Trabalho & Projetos
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="text-lg text-gray-700 dark:text-gray-300">
             Tecnologias que domino e como as aplico em projetos reais
           </p>
         </div>
@@ -69,13 +69,13 @@ export default function SkillsSection() {
           {workAreas.map((area, index) => (
             <div
               key={area.title}
-              className="animate-fade-in-up rounded-xl border border-gray-200 bg-white p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"
+              className="animate-fade-in-up rounded-xl border border-gray-200 bg-gray-50 p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <h3 className="mb-2 text-xl font-bold text-cyan-500">
                 {area.title}
               </h3>
-              <p className="mb-6 text-sm text-gray-500 dark:text-gray-400">
+              <p className="mb-6 text-sm text-gray-600 dark:text-gray-400">
                 {area.description}
               </p>
 
@@ -124,7 +124,7 @@ export default function SkillsSection() {
             {featuredProjects.map((project, index) => (
               <div
                 key={project.name}
-                className="animate-fade-in-up rounded-xl border border-gray-200 bg-white p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"
+                className="animate-fade-in-up rounded-xl border border-gray-200 bg-gray-50 p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"
                 style={{ animationDelay: `${600 + index * 200}ms` }}
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
@@ -152,6 +152,8 @@ export default function SkillsSection() {
                     </div>
                     <a
                       href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-block rounded-lg border border-cyan-500 px-6 py-2 text-sm font-medium text-cyan-500 transition-all duration-300 hover:bg-cyan-500 hover:text-white"
                     >
                       Ver Detalhes
@@ -171,7 +173,7 @@ export default function SkillsSection() {
           >
             <div className="animate-bounce-slow mb-3 text-3xl">🚀</div>
             <h3 className="mb-2 text-lg font-bold">Mais Projetos em Breve</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
+            <p className="text-sm text-gray-700 dark:text-gray-300">
               Estou trabalhando em novos projetos que serão adicionados ao
               portfólio em breve.
             </p>

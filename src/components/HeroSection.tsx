@@ -11,11 +11,11 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
             <h1 className="mb-4 text-4xl font-bold lg:text-6xl">
               Olá, sou o <span className="text-cyan-500">Diogo Santos.</span>
             </h1>
-            <h2 className="mb-6 text-xl text-gray-600 lg:text-2xl dark:text-gray-300">
+            <h2 className="mb-6 text-xl text-gray-700 lg:text-2xl dark:text-gray-300">
               Desenvolvedor Full-Stack apaixonado por transformar ideias em
               realidade digital.
             </h2>
-            <p className="mb-8 text-lg leading-relaxed text-gray-500 dark:text-gray-400">
+            <p className="mb-8 text-lg leading-relaxed text-gray-600 dark:text-gray-400">
               Este é o espaço onde a sua visão encontra a minha expertise para
               criar soluções web modernas, eficientes e impactantes.
             </p>

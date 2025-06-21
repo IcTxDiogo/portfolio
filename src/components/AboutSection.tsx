@@ -21,13 +21,13 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="bg-white py-20 dark:bg-gray-800">
+    <section id="about" className="bg-gray-100 py-20 dark:bg-gray-850">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* About Introduction */}
         <div className="animate-fade-in-up mb-20 text-center">
           <h2 className="mb-8 text-3xl font-bold lg:text-4xl">Sobre Mim</h2>
           <div className="mx-auto max-w-3xl">
-            <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+            <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
               Desenvolvedor Full-Stack especializado em aplicações Laravel,
               apaixonado por transformar ideias em realidade digital. Com
               experiência tanto em sistemas legados quanto em arquiteturas

@@ -1,6 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
+/* Tailwind v4 Dark Mode Configuration */
+@theme {
+  --color-*: initial;
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-850: #172033;
+  --color-gray-900: #0f172a;
+  --color-cyan-500: #06b6d4;
+  --color-blue-500: #3b82f6;
+}
+
+@variant dark (&:is(.dark, .dark *));
+
 :root {
   font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -41,6 +61,19 @@ body {
 }
 
 /* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4a5568;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+/* Fallback for system preference */
 @media (prefers-color-scheme: dark) {
   ::-webkit-scrollbar-track {
     background: #2d3748;
