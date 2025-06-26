@@ -48,7 +48,7 @@ export default function SkillsSection() {
         "Tailwind CSS",
       ],
       status: "Em desenvolvimento",
-      link: "https://bullet-flow.diogo-santos.tech",
+      link: "https://bulletflow.diogo-santos.tech",
     },
   ];
 
